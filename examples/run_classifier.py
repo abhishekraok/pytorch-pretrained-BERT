@@ -34,9 +34,7 @@ from torch.utils.data.distributed import DistributedSampler
 from pytorch_pretrained_bert.tokenization import BertTokenizer
 from pytorch_pretrained_bert.modeling import BertForSequenceClassification
 from pytorch_pretrained_bert.optimization import BertAdam
-from pytorch_pretrained_bert.file_utils import PYTORCH_PRETRAINED_BERT_CACHE
-
-logging.basicConfig(format = '%(asctime)s - %(levelname)s - %(name)s -   %(message)s',
+logging.basicConfig(format = 'SystemLog: %(asctime)s - %(levelname)s - %(name)s -   %(message)s',
                     datefmt = '%m/%d/%Y %H:%M:%S',
                     level = logging.INFO)
 logger = logging.getLogger(__name__)
@@ -426,6 +424,7 @@ def main():
         "cola": 2,
         "mnli": 3,
         "mrpc": 2,
+        "sst": 2
     }
 
     if args.local_rank == -1 or args.no_cuda:
