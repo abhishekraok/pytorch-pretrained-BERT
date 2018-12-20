@@ -453,6 +453,7 @@ def main():
         "cola": ColaProcessor,
         "mnli": MnliProcessor,
         "mrpc": MrpcProcessor,
+        "sst": SstProcessor,
     }
 
     if args.local_rank == -1 or args.no_cuda:
